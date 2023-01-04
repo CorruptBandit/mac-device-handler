@@ -1,4 +1,4 @@
-# DSH
+# MacOS - Device Handler Service (DHS)
 
 Application to run as a service that detecs a given device and then 
 swiches the keyboard layout and scroll direction.
@@ -32,7 +32,7 @@ Set the application to have `Run Shell Script` action with the following shell c
 ```
 
 **Provide DSH with Permissions**: 
-- System Preferences --> Security & Privacy --> Click the lock to make changes --> Add DSH to the list
+- System Preferences --> Security & Privacy --> Click the lock to make changes --> Add DHS to the list
 
 ### Killing the Service
 
