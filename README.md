@@ -5,9 +5,13 @@ swiches the keyboard layout and scroll direction.
 
 ## Keyboard Handler
 
-**Build from source**: `clang -framework Carbon -framework Foundation 
-./Keyboard-Handler/src/SwitchKeyboard.m -o 
-./Keyboard-Handler/SwitchKeyboard`
+**Build from source**: 
+
+```sh
+clang -framework Carbon -framework Foundation ./Keyboard-Handler/src/SwitchKeyboard.m -o ./Keyboard-Handler/SwitchKeyboard
+```
+
+_Requires Xcode tools_
 
 ## Scroll Handler
 
@@ -19,16 +23,19 @@ swiches the keyboard layout and scroll direction.
 
 ### Running the Service
 
-Set up an Automator Application with the following: 
-`/usr/local/bin/CheckDeviceStatus "Wireless Headset" &>/dev/null &`
+**Set up an Automator Application**:
+
+Set the application to have `Run Shell Script` action with the following shell command:
+
+```sh
+/usr/local/bin/CheckDeviceStatus "<Device to Monitor>" &>/dev/null &
+```
+
+**Provide DSH with Permissions**: 
+- System Preferences --> Security & Privacy --> Click the lock to make changes --> Add DSH to the list
 
 ### Killing the Service
 
-Run the following command: `kill -9 $(ps aux | grep 
-'/usr/local/bin/CheckDeviceStatus' | awk '{print $2}' | head -n 1)`
-
-
-
-# mac-device-handler
-# mac-device-handler
-# mac-device-handler
+```sh
+kill -9 $(ps aux | grep '/usr/local/bin/CheckDeviceStatus' | awk '{print $2}' | head -n 1)
+```
