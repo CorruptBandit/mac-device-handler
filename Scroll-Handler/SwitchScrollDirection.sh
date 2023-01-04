@@ -22,6 +22,8 @@ osascript - "${direction}" >/dev/null << EOT
 		end tell
 
 		tell application "System Events" to tell process "System Preferences"
+			repeat until exists tab group 1 of window 0
+        	end repeat
 			set theCheckbox to checkbox 1 of tab group 1 of window 0
 			if direction is equal to "Natural" then
 				tell theCheckbox
