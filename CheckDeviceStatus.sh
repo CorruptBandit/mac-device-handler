@@ -25,7 +25,7 @@ change_settings() {
 change_settings
 while true
 do
-    if [[ "$(ioreg -p IOUSB)" != *"${_tmp}"* ]]
+    if [[ "$(ioreg -p IOUSB)" != "${_tmp}" ]]
     then 
         change_settings
     fi
