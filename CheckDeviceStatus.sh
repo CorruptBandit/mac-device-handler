@@ -2,13 +2,18 @@
 
 set -e
 
-if [[ ! "${@}" ]]; then
-    echo "ERROR: No device was given."
-    exit -1
+if [[ ! "${@}" ]];
+then
+    if [[ -z "${DEVICE_TO_CHECK}" ]];
+    then
+        echo "ERROR: No device was given."
+        exit -1
+    else
+        DEVICE_TO_CHECK="${DEVICE_TO_CHECK}"
+    fi
+else
+    DEVICE_TO_CHECK="${1}"
 fi
-
-DEVICE_TO_CHECK="${1}"
-_tmp="$(ioreg -p IOUSB)"
 
 change_settings() {
     if [[ "$(ioreg -p IOUSB)" == *"${DEVICE_TO_CHECK}"* ]]
@@ -21,6 +26,8 @@ change_settings() {
         fi
             _tmp="$(ioreg -p IOUSB)"
 }
+
+_tmp="$(ioreg -p IOUSB)"
 
 change_settings
 while true
