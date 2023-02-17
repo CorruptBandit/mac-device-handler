@@ -8,7 +8,7 @@ swiches the keyboard layout and scroll direction.
 **Build from source**: 
 
 ```sh
-clang -framework Carbon -framework Foundation ./Keyboard-Handler/src/SwitchKeyboard.m -o ./Keyboard-Handler/SwitchKeyboard
+swiftc -framework Carbon -framework Foundation ./Keyboard-Handler/src/SwitchKeyboard.swift
 ```
 
 _Requires Xcode tools_
