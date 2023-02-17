@@ -1,7 +1,6 @@
 # MacOS - Device Handler Service (DHS)
 
-Application to run as a service that detecs a given device and then 
-swiches the keyboard layout and scroll direction.
+Application to run as a service that detects a given device and then runs a script when plugged-in and out, as an example the code in this repository will swich the keyboard layout and scroll direction when a certain device.
 
 **Example Usage**
 1. Docking Station is plugged in
