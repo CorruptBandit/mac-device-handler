@@ -17,11 +17,13 @@ Application to run as a service that detects a given device and then runs a scri
 
 An install script has been created, running this script will prompt for the device to detect and then to set-up the service.
 
-Download and further instructions can be found on the [Releases](https://github.com/CorruptBandit/mac-device-handler/releases/tag/v0.0.1-alpha)
+Currently only MacOS Ventura is supported.
+
+Download and further instructions can be found on the [Releases](https://github.com/CorruptBandit/mac-device-handler/releases).
 
 ## Customisation
 
-DHS can run any script when detecting devices, for the sake of this repository it will change the keyboard and mouse layout. 
+DHS can run any script when detecting devices, for the sake of this repository it will change the keyboard and mouse scroll direction.
 
 **Changing Keyboard Layout and Scroll Direction**
 
@@ -29,7 +31,7 @@ Change the the positional parameters for `/usr/local/bin/SwitchKeyboard` & `/usr
 
 **Running custom scripts**
 
-To run custom scripts, change `/usr/local/bin/SwitchKeyboard` & `/usr/local/bin/SwitchScrollDirection` to the script(s) desired.
+To run custom scripts, change `/usr/local/bin/SwitchKeyboard` & `/usr/local/bin/SwitchScrollDirection` to the script(s) desired in [CheckDeviceStatus.sh](./CheckDeviceStatus.sh).
 
 ```bash
 then
@@ -54,6 +56,8 @@ kill -9 $(ps aux | grep '/usr/local/bin/CheckDeviceStatus' | awk '{print $2}' | 
 ### Keyboard Handler
 
 The [keyboard handler](./Keyboard-Handler/src/SwitchKeyboard.swift) is built using Swift as the logic for `TISSelectInputSource` & `TISCreateInputSourceList` are closed source. The script takes one positional argument which is the keyboard layout.
+
+Keyboard switching on Ventura requires the input source to already be configured in `System Settings -> Keyboard -> Input Sources -> Edit -> + Source`
 
 **Build from source**: 
 

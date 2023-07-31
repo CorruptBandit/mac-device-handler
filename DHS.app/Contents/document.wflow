@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>512.1</string>
+	<string>520</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -59,13 +59,13 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>/usr/local/bin/CheckDeviceStatus "&lt;PLACEHOLDER&gt;" &amp;&gt;/dev/null &amp;</string>
+					<string>/usr/local/bin/CheckDeviceStatus "&lt;Device to Monitor&gt;" &amp;&gt;/dev/null &amp;</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
 					<integer>0</integer>
 					<key>shell</key>
-					<string>/bin/bash</string>
+					<string>/bin/zsh</string>
 					<key>source</key>
 					<string></string>
 				</dict>
@@ -84,7 +84,7 @@
 				<key>Class Name</key>
 				<string>RunShellScriptAction</string>
 				<key>InputUUID</key>
-				<string>D8D55D40-88AC-4582-AF18-0B083D95B4D1</string>
+				<string>59916E3C-1018-4BE8-B2C1-8CA888DFE4FA</string>
 				<key>Keywords</key>
 				<array>
 					<string>Shell</string>
@@ -94,11 +94,9 @@
 					<string>Unix</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>016C2A86-6418-4604-8CCF-C5CF24584B4F</string>
-				<key>ShowWhenRun</key>
-				<false/>
+				<string>6E66AD69-3FCF-442B-86A8-24B0A51D1E73</string>
 				<key>UUID</key>
-				<string>4615DC47-034F-4E1D-BD3D-52FCE8640C9A</string>
+				<string>3BDF8C50-6EE9-4968-ADE2-22C3C0C5E4C7</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Automator</string>
@@ -171,10 +169,12 @@
 						<string>4</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>310.000000:252.000000</string>
+				<string>309.000000:252.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
