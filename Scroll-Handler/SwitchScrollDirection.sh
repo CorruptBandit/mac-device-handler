@@ -19,7 +19,7 @@ osascript - "${direction}" >/dev/null << EOT
 				delay 0
 			end repeat
 			repeat while not (exists checkbox "Natural scrolling" of group 1 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1)
-				click radio button 1 of tab group 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
+				click radio button 3 of tab group 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
 				click radio button 2 of tab group 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
 			end repeat
 			set theCheckbox to checkbox "Natural scrolling" of group 1 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
