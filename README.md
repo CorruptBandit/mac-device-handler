@@ -69,7 +69,7 @@ _Requires Xcode tools_
 
 ## Scroll Handler
 
-The [scroll handler](./Scroll-Handler/SwitchScrollDirection.sh) uses Apple's osascript to open the system preferences and alter the scroll direction, this is because it is not possible to changing this value using a command. The script takes one positional argument which is the scroll direction.
+The [scroll handler](./Scroll-Handler/SwitchScrollDirection.sh) uses defaults to write to `com.apple.swipescrolldirection` and then uses `activateSettings -u` to activate the changes without requiring a restart. 
 
 ## Setting up the Service
 
