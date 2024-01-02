@@ -19,8 +19,6 @@ get_device_status() {
     if [[ "$(ioreg -p IOUSB | grep -i "${DEVICE_TO_CHECK}")" ]]
     then
         echo "plugged"
-    else
-        echo "unplugged"
     fi
 }
 
